@@ -2,10 +2,6 @@ import os
 import streamlit as st
 from youtube_transcript_api import YouTubeTranscriptApi
 from transformers import pipeline
-from huggingface_hub import login
-
-# 🔐 Use token securely from secrets
-login(token=st.secrets["HUGGINGFACE_TOKEN"])
 
 # Load the summarization pipeline
 summarizer = pipeline("summarization", model="sshleifer/distilbart-cnn-12-6")
@@ -50,4 +46,4 @@ def main():
             st.warning("Please enter a valid YouTube link.")
 
 if __name__ == "__main__":
-    main()
+    main()     
