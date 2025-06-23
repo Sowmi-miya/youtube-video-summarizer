@@ -1,0 +1,5 @@
+streamlit
+transformers
+torch
+pytube
+youtube-transcript-api
